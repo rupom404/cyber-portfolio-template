@@ -24,6 +24,10 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+html {
+  scroll-behavior: smooth !important;
+}
+
 @media (pointer: fine) {
   html, body, a, button, [role="button"] {
     cursor: none !important;

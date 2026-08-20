@@ -165,7 +165,21 @@ export default function Home() {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  // Smooth scroll handler for anchor links
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, id: string) => {
+    e.preventDefault();
+    soundFx.playHover();
+    setActiveSection(id);
 
+    const targetElement = document.getElementById(id);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+      window.history.pushState(null, '', href);
+    }
+  };
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -247,10 +261,7 @@ export default function Home() {
                   <a
                     key={link.label}
                     href={link.href}
-                    onClick={() => {
-                      setActiveSection(link.id);
-                      soundFx.playHover();
-                    }}
+                    onClick={(e) => handleNavClick(e, link.href, link.id)}
                     className={`relative px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-mono transition-all duration-200 ${
                       isActive
                         ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/40 shadow-[0_0_12px_rgba(6,182,212,0.3)] font-semibold'
@@ -301,7 +312,7 @@ export default function Home() {
               <div className="flex items-center gap-4 pt-1">
                 <a
                   href="#labs"
-                  onClick={() => soundFx.playHover()}
+                  onClick={(e) => handleNavClick(e, '#labs', 'labs')}
                   className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-cyan-500 text-zinc-950 font-semibold font-mono text-xs sm:text-sm hover:bg-cyan-400 transition-all duration-200 flex items-center gap-2 shadow-[0_0_20px_rgba(6,182,212,0.35)] hover:scale-105"
                 >
                   <Terminal size={15} /> Explore Labs
