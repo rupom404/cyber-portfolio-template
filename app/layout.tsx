@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Iftakhar Ahmed | Cybersecurity Specialist',
   description:
-    'Portfolio of Iftakhar Ahmed (IAR007) — Aspiring Cybersecurity Analyst, Network Security & Practical CTF Practitioner.',
+    'Portfolio of Iftakhar Ahmed (IAR404) — Aspiring Cybersecurity Analyst, Network Security & Practical CTF Practitioner.',
   icons: {
     icon: '/icon.svg',
   },

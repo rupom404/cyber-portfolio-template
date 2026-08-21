@@ -250,7 +250,7 @@ export default function Home() {
               <span className="text-cyan-400 font-bold">~/</span>
               <span className="text-zinc-200 font-semibold tracking-wide hidden xs:inline">iftakhar-ahmed</span>
               <span className="text-zinc-200 font-semibold tracking-wide xs:hidden">iftakhar</span>
-              <span className="text-cyan-500/70 text-xs hidden md:inline">[IAR007]</span>
+              <span className="text-cyan-500/70 text-xs hidden md:inline">[IAR404]</span>
             </a>
 
             {/* Responsive Pill Nav */}
@@ -288,7 +288,7 @@ export default function Home() {
               {/* Status Badge */}
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/40 bg-cyan-950/40 text-cyan-300 text-[10px] sm:text-xs font-mono shadow-[0_0_15px_rgba(6,182,212,0.15)]">
                 <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>SYSTEM: READY // SECURITY INITIATE</span>
+                <span>SYSTEM: Security Initiate // Engaging...</span>
               </div>
 
               {/* Name */}
@@ -623,7 +623,7 @@ export default function Home() {
           {/* FOOTER */}
           <footer className="pt-8 sm:pt-12 pb-6 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] sm:text-xs text-zinc-500 font-mono">
             <div>
-              [IAR007] • <span className="text-zinc-400">Iftakhar Ahmed</span> © {new Date().getFullYear()}
+              [IAR404] • <span className="text-zinc-400">Iftakhar Ahmed</span> © {new Date().getFullYear()}
             </div>
             <div className="flex items-center gap-4">
               <a
@@ -635,7 +635,7 @@ export default function Home() {
                 <GithubIcon size={13} /> rupom404
               </a>
               <a
-                href="#contact"
+                href="mailto:iftakhar404@proton.me"
                 className="hover:text-cyan-400 flex items-center gap-1.5 transition-colors"
               >
                 <Mail size={13} /> Contact

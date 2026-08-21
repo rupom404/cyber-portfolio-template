@@ -68,7 +68,7 @@ export default function HeroAvatar() {
         {/* 5. BOTTOM OPERATOR BADGE */}
         <div className="absolute -bottom-2.5 sm:-bottom-3 left-1/2 -translate-x-1/2 z-20 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-[#04060a]/90 backdrop-blur-md border border-cyan-500/40 shadow-[0_0_15px_rgba(6,182,212,0.25)] flex items-center gap-1.5 text-[8px] sm:text-[9px] font-mono text-cyan-300 whitespace-nowrap pointer-events-none">
           <ShieldCheck size={11} className="text-emerald-400" />
-          <span>AUTH_OPERATOR // 0x007</span>
+          <span>AUTH_OPERATOR // 0x404</span>
         </div>
 
         {/* Crosshair Accent */}

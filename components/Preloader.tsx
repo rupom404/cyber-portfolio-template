@@ -10,8 +10,8 @@ const nameLines = [
 ];
 
 export default function Preloader({ onComplete }: { onComplete: () => void }) {
-  // Step 0: Centered "IAR007" with glowing cyan accents
-  // Step 1: "007" disappears, "I A R" glide into vertical column
+  // Step 0: Centered "IAR404" with glowing cyan accents
+  // Step 1: "404" disappears, "I A R" glide into vertical column
   // Step 2: "FTAKHAR", "HMED", "UPOM" slide out horizontally
   // Step 3: Dark curved curtain slide-up exit
   const [step, setStep] = useState(0);
@@ -86,7 +86,7 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
                 </span>
               </motion.div>
 
-              {/* 007 Badge/Suffix in Step 0 */}
+              {/* 404 Badge/Suffix in Step 0 */}
               {index === 2 && (
                 <motion.div
                   layout="position"
@@ -99,7 +99,7 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
                   className="overflow-hidden whitespace-nowrap"
                 >
                   <span className="text-5xl sm:text-8xl font-black tracking-tight text-cyan-400/80 ml-1 font-mono">
-                    007
+                    404
                   </span>
                 </motion.div>
               )}
