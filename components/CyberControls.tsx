@@ -30,58 +30,44 @@ export default function CyberControls({
 
   return (
     <aside
-      aria-label="Cyber HUD Control Deck"
-      className="fixed bottom-3 right-3 sm:bottom-6 sm:right-6 z-50 flex items-center gap-1 sm:gap-2 p-1 sm:p-1.5 rounded-full border border-cyan-500/30 bg-[#06080d]/85 backdrop-blur-md shadow-[0_0_20px_rgba(0,0,0,0.8)]"
+      aria-label="Cyber Controls"
+      className="fixed bottom-3 right-3 sm:bottom-6 sm:right-6 z-50 flex items-center gap-1.5 p-1 rounded-full border border-cyan-500/30 bg-[#04060a]/90 backdrop-blur-md shadow-[0_0_20px_rgba(0,0,0,0.8)] pointer-events-auto select-none"
     >
-      {/* Sound Toggle */}
+      {/* Sound Toggle Icon */}
       <button
         onClick={toggleSound}
         onMouseEnter={() => soundFx.playHover()}
-        className={`flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-mono transition-all duration-200 ${
+        aria-label={soundEnabled ? 'Disable Audio SFX' : 'Enable Audio SFX'}
+        title={soundEnabled ? 'Audio SFX: Active' : 'Audio SFX: Muted'}
+        className={`relative p-2 rounded-full transition-all duration-200 flex items-center justify-center ${
           soundEnabled
-            ? 'bg-cyan-500/15 border border-cyan-400/40 text-cyan-300'
-            : 'text-zinc-500 hover:text-zinc-300'
+            ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/50 shadow-[0_0_10px_rgba(6,182,212,0.3)]'
+            : 'text-zinc-500 hover:text-zinc-300 border border-transparent hover:bg-zinc-900/60'
         }`}
-        title="Toggle Cyber SFX"
       >
         {soundEnabled ? (
-          <>
-            <Volume2 size={13} className="text-cyan-400" />
-            <span className="hidden sm:inline">SFX: ON</span>
-            <span className="flex items-end gap-0.5 h-2.5 ml-0.5">
-              <span className="w-0.5 h-1.5 bg-cyan-400 animate-pulse" />
-              <span className="w-0.5 h-2.5 bg-cyan-300 animate-bounce" />
-            </span>
-          </>
+          <Volume2 size={15} className="text-cyan-400" />
         ) : (
-          <>
-            <VolumeX size={13} />
-            <span className="hidden sm:inline">SFX: OFF</span>
-          </>
+          <VolumeX size={15} />
         )}
       </button>
 
-      {/* Visual Animation FX Toggle */}
+      {/* Visual FX Toggle Icon */}
       <button
         onClick={toggleAnim}
         onMouseEnter={() => soundFx.playHover()}
-        className={`flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-mono transition-all duration-200 ${
+        aria-label={animEnabled ? 'Disable Motion FX' : 'Enable Motion FX'}
+        title={animEnabled ? 'Visual FX: Active' : 'Visual FX: Static'}
+        className={`relative p-2 rounded-full transition-all duration-200 flex items-center justify-center ${
           animEnabled
-            ? 'bg-cyan-500/15 border border-cyan-400/40 text-cyan-300'
-            : 'text-zinc-500 hover:text-zinc-300'
+            ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/50 shadow-[0_0_10px_rgba(6,182,212,0.3)]'
+            : 'text-zinc-500 hover:text-zinc-300 border border-transparent hover:bg-zinc-900/60'
         }`}
-        title="Toggle Motion"
       >
         {animEnabled ? (
-          <>
-            <Sparkles size={13} className="text-cyan-400" />
-            <span className="hidden sm:inline">FX: ACTIVE</span>
-          </>
+          <Sparkles size={15} className="text-cyan-400" />
         ) : (
-          <>
-            <EyeOff size={13} />
-            <span className="hidden sm:inline">FX: STATIC</span>
-          </>
+          <EyeOff size={15} />
         )}
       </button>
     </aside>

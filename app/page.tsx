@@ -22,6 +22,7 @@ import SmoothScroll from '@/components/SmoothScroll';
 import Preloader from '@/components/Preloader';
 import CyberCursor from '@/components/CyberCursor';
 import CyberBackground from '@/components/CyberBackground';
+import GtaCountdown from '@/components/GtaCountdown';
 import CyberControls from '@/components/CyberControls';
 import { soundFx } from '@/lib/soundEngine';
 
@@ -220,6 +221,9 @@ export default function Home() {
   return (
     <>
       <CyberCursor />
+
+      {/* Persistent Bottom-Left GTA VI Launch Countdown */}
+      <GtaCountdown />
 
       {/* Floating HUD Controller */}
       <CyberControls
