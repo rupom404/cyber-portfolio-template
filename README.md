@@ -83,11 +83,11 @@ This template receives messages directly into your personal email without needin
 2. Check your inbox and copy your generated **Access Key**.
 3. Create a `.env.local` file in your project root:
    ```env
-   WEB3FORMS_KEY=your-actual-access-key-here
+   NEXT_PUBLIC_WEB3FORMS_KEY=your-actual-access-key-here
    ```
 4. Verify that `app/page.tsx` references the environment variable:
    ```tsx
-   access_key: process.env.WEB3FORMS_KEY || '',
+   access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '',
    ```
 
 ---
