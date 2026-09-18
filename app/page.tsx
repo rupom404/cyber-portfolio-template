@@ -195,7 +195,7 @@ export default function Home() {
           Accept: 'application/json',
         },
         body: JSON.stringify({
-          access_key: 'YOUR_ACCESS_KEY_HERE',
+          access_key: process.env.WEB3FORMS_KEY,
           subject: `[Cyber Portfolio] New Transmission from ${formData.name}`,
           from_name: formData.name,
           email: formData.email,
@@ -252,9 +252,9 @@ export default function Home() {
               className="flex items-center gap-1 font-mono text-[11px] sm:text-sm pl-2.5 sm:pl-4 whitespace-nowrap shrink-0 hover:opacity-80 transition-opacity"
             >
               <span className="text-cyan-400 font-bold">~/</span>
-              <span className="text-zinc-200 font-semibold tracking-wide hidden xs:inline">iftakhar-ahmed</span>
-              <span className="text-zinc-200 font-semibold tracking-wide xs:hidden">iftakhar</span>
-              <span className="text-cyan-500/70 text-xs hidden md:inline">[IAR404]</span>
+              <span className="text-zinc-200 font-semibold tracking-wide hidden xs:inline">your-name</span>
+              <span className="text-zinc-200 font-semibold tracking-wide xs:hidden">name</span>
+              <span className="text-cyan-500/70 text-xs hidden md:inline">[username]</span>
             </a>
 
             {/* Responsive Pill Nav */}
@@ -300,7 +300,7 @@ export default function Home() {
                 <h1
                   className={`${specialElite.className} text-3xl sm:text-5xl lg:text-6xl font-normal tracking-wide text-white drop-shadow-[0_0_25px_rgba(255,255,255,0.15)] leading-tight`}
                 >
-                  Iftakhar Ahmed
+                   Your Name
                 </h1>
                 <h2 className="text-base sm:text-xl lg:text-2xl font-mono text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-500">
                   &gt; Aspiring Cybersecurity Analyst &amp; Ethical Hacker
@@ -479,7 +479,7 @@ export default function Home() {
                   <div className="space-y-2 pt-1">
                     {/* GitHub */}
                     <a
-                      href="https://github.com/rupom404"
+                      href="github-link"
                       target="_blank"
                       rel="noreferrer"
                       onClick={() => soundFx.playHover()}
@@ -487,14 +487,14 @@ export default function Home() {
                     >
                       <div className="flex items-center gap-2.5">
                         <GithubIcon size={15} className="text-zinc-400 group-hover:text-cyan-400" />
-                        <span>rupom404</span>
+                        <span>username</span>
                       </div>
                       <ExternalLink size={13} className="text-zinc-600 group-hover:text-cyan-400" />
                     </a>
 
                     {/* X (Twitter) */}
                     <a
-                      href="https://x.com/mr_reactors"
+                      href="twitter-link"
                       target="_blank"
                       rel="noreferrer"
                       onClick={() => soundFx.playHover()}
@@ -509,7 +509,7 @@ export default function Home() {
 
                     {/* Telegram */}
                     <a
-                      href="https://t.me/ErrorSignal404"
+                      href="telegram-link"
                       target="_blank"
                       rel="noreferrer"
                       onClick={() => soundFx.playHover()}
@@ -517,20 +517,20 @@ export default function Home() {
                     >
                       <div className="flex items-center gap-2.5">
                         <TelegramIcon size={15} className="text-zinc-400 group-hover:text-cyan-400" />
-                        <span>ErrorSignal404</span>
+                        <span>telegram-username</span>
                       </div>
                       <ExternalLink size={13} className="text-zinc-600 group-hover:text-cyan-400" />
                     </a>
 
-                    {/* ProtonMail */}
+                    {/* YourMail */}
                     <a
-                      href="mailto:iftakhar404@proton.me"
+                      href="mailto:mail@domain"
                       onClick={() => soundFx.playHover()}
                       className="flex items-center justify-between p-2.5 sm:p-3 rounded-xl border border-zinc-800/80 bg-zinc-900/40 hover:border-cyan-500/50 hover:bg-cyan-950/20 text-zinc-300 hover:text-cyan-300 transition-all font-mono text-[11px] sm:text-xs group"
                     >
                       <div className="flex items-center gap-2.5">
                         <Mail size={15} className="text-zinc-400 group-hover:text-cyan-400" />
-                        <span>iftakhar404@proton.me</span>
+                        <span>mail@domain</span>
                       </div>
                       <ExternalLink size={13} className="text-zinc-600 group-hover:text-cyan-400" />
                     </a>
@@ -627,19 +627,19 @@ export default function Home() {
           {/* FOOTER */}
           <footer className="pt-8 sm:pt-12 pb-6 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] sm:text-xs text-zinc-500 font-mono">
             <div>
-              [IAR404] • <span className="text-zinc-400">Iftakhar Ahmed</span> © {new Date().getFullYear()}
+              [username] • <span className="text-zinc-400">Your Name</span> © {new Date().getFullYear()}
             </div>
             <div className="flex items-center gap-4">
               <a
-                href="https://github.com/rupom404"
+                href="your-github"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-cyan-400 flex items-center gap-1.5 transition-colors"
               >
-                <GithubIcon size={13} /> rupom404
+                <GithubIcon size={13} /> github-username
               </a>
               <a
-                href="mailto:iftakhar404@proton.me"
+                href="mailto:mail@domain"
                 className="hover:text-cyan-400 flex items-center gap-1.5 transition-colors"
               >
                 <Mail size={13} /> Contact

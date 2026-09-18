@@ -99,7 +99,7 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
                   className="overflow-hidden whitespace-nowrap"
                 >
                   <span className="text-5xl sm:text-8xl font-black tracking-tight text-cyan-400/80 ml-1 font-mono">
-                    404
+                    codename
                   </span>
                 </motion.div>
               )}

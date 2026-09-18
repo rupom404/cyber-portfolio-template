@@ -41,12 +41,12 @@ const CYBER_DATA = [
   { text: '[-] DNS_PROBE_FINISHED_NXDOMAIN (Resolver: 127.0.0.53)', type: 'err' },
 
   // Platforms, Academies & Portals
-  { text: 'https://tryhackme.com/p/IAR404 [Rank: Top 5%]', type: 'url' },
-  { text: 'https://app.hackthebox.com/profile/iar404', type: 'url' },
+  { text: 'https://tryhackme.com/p/user [Rank: Top 5%]', type: 'url' },
+  { text: 'https://app.hackthebox.com/profile/user', type: 'url' },
   { text: 'https://portswigger.net/web-security/academy', type: 'url' },
   { text: 'https://owasp.org/www-project-top-ten/', type: 'url' },
   { text: 'https://cve.mitre.org/cgi-bin/cvename.cgi', type: 'url' },
-  { text: 'https://github.com/rupom404/personal-pages.dev', type: 'url' },
+  { text: 'https://github.com/user', type: 'url' },
 
   // Hardening Scripts, Sockets & Rules
   { text: 'iptables -A INPUT -p tcp --dport 22 -s 10.0.0.0/8 -j ACCEPT', type: 'code' },

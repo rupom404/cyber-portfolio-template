@@ -57,7 +57,7 @@ export default function HeroAvatar() {
         <div className="relative w-full h-full rounded-full overflow-hidden bg-[#04070d] border border-cyan-500/40">
           <img
             src="/profile.jpg"
-            alt="Iftakhar Ahmed"
+            alt="Your Name"
             className="w-full h-full object-cover object-[center_18%] scale-[1.22] contrast-[105%] group-hover:scale-[1.28] transition-all duration-700 pointer-events-none"
             onError={(e) => {
               (e.target as HTMLElement).style.display = 'none';
@@ -68,7 +68,7 @@ export default function HeroAvatar() {
         {/* 5. BOTTOM OPERATOR BADGE */}
         <div className="absolute -bottom-2.5 sm:-bottom-3 left-1/2 -translate-x-1/2 z-20 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-[#04060a]/90 backdrop-blur-md border border-cyan-500/40 shadow-[0_0_15px_rgba(6,182,212,0.25)] flex items-center gap-1.5 text-[8px] sm:text-[9px] font-mono text-cyan-300 whitespace-nowrap pointer-events-none">
           <ShieldCheck size={11} className="text-emerald-400" />
-          <span>AUTH_OPERATOR // 0x404</span>
+          <span>AUTH_OPERATOR // 0xcode</span>
         </div>
 
         {/* Crosshair Accent */}
